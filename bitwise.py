@@ -1,0 +1,15 @@
+import  cv2 as cv
+import numpy as np
+img = np.zeros((512,512,3),np.uint8)
+img1 = np.zeros((512,512,3),np.uint8)
+img2 = cv.rectangle(img, (0,0),(255,512),(255, 255, 255),-1)
+img3 = cv.rectangle(img1 ,(100,0),(300,300),(255, 255, 255),-1)
+# img1 = cv.imread('black.png')
+# img1 =cv.resize(img1,(512,512))
+# img1 = cv.imread("imge.png")
+bitwise = cv.bitwise_not(img1,img2)
+cv.imshow("img1",img2)
+cv.imshow("img2",img3)
+cv.imshow("bitwise",bitwise)
+cv.waitKey(0)
+cv.destroyAllWindows()
